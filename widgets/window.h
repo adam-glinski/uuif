@@ -11,11 +11,10 @@ namespace uuif
         std::unordered_map<id_t, std::shared_ptr<c_widget>> m_widgets{};
 
     public:
-        c_window(std::string const &title, position_t position, dimension_t size)
+        c_window(const std::string &title, area_t area)
         {
-            set_label(title);
-            set_position(position);
-            set_size(size);
+            this->label = title;
+            this->area = area;
         }
 
         c_window(){};
@@ -24,6 +23,6 @@ namespace uuif
 
         void draw() override;
         void update() override;
-        void input() override;
+        void disable() override;
     };
 }

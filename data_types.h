@@ -3,20 +3,27 @@
 
 namespace uuif
 {
-    //using id_t = uint32_t;
+    // using id_t = uint32_t;
     using id_t = int;
 
-	struct position_t {
-	    int x{}, y{};
-	};
-	
-	struct dimension_t {
-	    float width{}, height{};
-	};
+    struct area_t
+    {
+        float x{}, y{}, w{}, h{};
+    };
+
+    struct vector_2d
+    {
+        float x{}, y{};
+        vector_2d(float x, float y) : x(x), y(y) {}
+    };
 
     const enum class widget_t {
-        unknown = -1,
-        base = 0,
-        window
+        invalid = -1,
+        checkbox,
+        slider,
+        button,
+        combobox,
+        key_bind,
+        tab
     };
 }

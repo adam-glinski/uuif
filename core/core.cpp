@@ -2,11 +2,12 @@
 
 #include "../utils/hashing.hpp"
 
-std::shared_ptr<uuif::c_window> uuif::c_core::add_window(std::string title, position_t position, dimension_t size)
+std::shared_ptr<uuif::c_window> uuif::c_core::add_window(std::string title, area_t area)
 {
     id_t window_id = g_hash->compile_time(title.c_str());
-    if (auto it_window = m_windows.find(window_id); it_window == m_windows.end()) {
-        auto temp = std::make_shared<c_window>(title, position, size);
+    if (auto it_window = m_windows.find(window_id); it_window == m_windows.end())
+    {
+        auto temp = std::make_shared<c_window>(title, area);
         m_windows.try_emplace(window_id, temp);
         it_window = m_windows.find(window_id);
     }

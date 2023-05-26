@@ -17,7 +17,7 @@ namespace uuif
         std::unordered_map<id_t, std::shared_ptr<c_window>> m_windows{};
 
     public:
-        std::shared_ptr<c_window> add_window(std::string title, position_t position, dimension_t size);
+        std::shared_ptr<c_window> add_window(std::string title, area_t area);
         bool remove_window(id_t id);
         std::shared_ptr<c_window> get_window(id_t id);
         std::shared_ptr<c_window> get_window(std::string title);
