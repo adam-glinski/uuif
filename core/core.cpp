@@ -2,6 +2,9 @@
 
 #include "../utils/hashing.hpp"
 
+// NOTE: Do I rlly want to return the object at the end ??
+/* TODO: Replace this if with just .try_emplace() or add function overload
+(one will parse the object and another will create it and return) */
 std::shared_ptr<uuif::c_window> uuif::c_core::add_window(std::string title, area_t area)
 {
     id_t window_id = g_hash->compile_time(title.c_str());

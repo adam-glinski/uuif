@@ -4,6 +4,7 @@
 
 #include "../data_types.h"
 
+// TODO: Add save() and load()
 namespace uuif
 {
     class c_widget : public std::enable_shared_from_this<c_widget>
