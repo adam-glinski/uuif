@@ -1,0 +1,35 @@
+{
+    "version": 4,
+    "configurePresets": [
+        {
+            "name": "windows",
+            "displayName": "Windows-only configuration",
+            "description": "Using compilers for Visual Studio 17 2022 (x64_x86 architecture)",
+            "generator": "Visual Studio 17 2022",
+            "toolset": "host=x64",
+            "architecture": "win32",
+            "binaryDir": "${sourceDir}/build/${presetName}",
+            "cacheVariables": {
+                "CMAKE_INSTALL_PREFIX": "${sourceDir}/install/${presetName}",
+                "CMAKE_C_COMPILER": "cl.exe",
+                "CMAKE_CXX_COMPILER": "cl.exe"
+            }
+        }
+    ],
+    "buildPresets": [
+        {
+            "name": "windows-release",
+            "displayName": "windows - release",
+            "configurePreset": "windows",
+            "configuration": "Release"
+        }
+    ],
+    "testPresets": [
+        {
+            "name": "default-windows",
+            "configurePreset": "windows",
+            "output": {"outputOnFailure": true},
+            "execution": {"noTestAction": "error", "stopOnFailure": true}
+        }
+    ]
+}
