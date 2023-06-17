@@ -6,7 +6,7 @@
 
 namespace uuif
 {
-    class c_window : public c_widget /*, public std::enable_shared_from_this<c_window>*/
+    class c_window : public c_widget , public std::enable_shared_from_this<c_window>
     {
         std::unordered_map<id_t, std::shared_ptr<c_widget>> m_children{};
         bool m_enabled{true}, m_clicked{false}, m_should_drag{false};
@@ -18,6 +18,7 @@ namespace uuif
         {
             this->label = title;
             this->area = area;
+            this->type = widget_t::window;
         }
 
         bool is_enabled() { return m_enabled; }
@@ -25,10 +26,9 @@ namespace uuif
 
         void add_widget(std::shared_ptr<c_widget> widget);
 
-        c_window(){};
+        //c_window() =;
         ~c_window();
         void draw() override;
         void update() override;
-        void disable() override;
     };
 }

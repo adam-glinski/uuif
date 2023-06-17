@@ -17,13 +17,15 @@ namespace uuif
         vector_2d(float x, float y) : x(x), y(y) {}
     };
 
-    const enum class widget_t {
+    enum class widget_t
+    {
         invalid = -1,
         checkbox,
         slider,
         button,
         combobox,
         key_bind,
-        tab
+        tab,
+        window
     };
 }

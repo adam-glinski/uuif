@@ -9,6 +9,7 @@
 
 #include "../widgets/widget.h"
 #include "../widgets/window.h"
+#include "../widgets/checkbox.h"
 
 namespace uuif
 {
@@ -17,10 +18,10 @@ namespace uuif
         std::unordered_map<id_t, std::shared_ptr<c_window>> m_windows{};
 
     public:
-        std::shared_ptr<c_window> add_window(std::string title, area_t area);
+        std::shared_ptr<c_window> add_window(const std::string& title, area_t area);
         bool remove_window(id_t id);
         std::shared_ptr<c_window> get_window(id_t id);
-        std::shared_ptr<c_window> get_window(std::string title);
+        std::shared_ptr<c_window> get_window(const std::string& title);
     };
 
     inline const auto core = c_core::get();

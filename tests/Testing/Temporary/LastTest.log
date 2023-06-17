@@ -1,0 +1,19 @@
+Start testing: Jun 17 23:08 Central European Daylight Time
+----------------------------------------------------------
+Unable to find executable: uuif_test
+1/1 Testing: NAME
+1/1 Test: NAME
+Command: "" "COMMAND" "uuif_test" "WORKING_DIRECTORY" "/build/tests"
+Directory: E:/!dev/!menus/!frameworks/UUIF/uuiframework/tests
+"NAME" start time: 
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"NAME" end time: Jun 17 23:08 Central European Daylight Time
+"NAME" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: Jun 17 23:08 Central European Daylight Time
