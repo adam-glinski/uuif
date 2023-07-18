@@ -2,7 +2,6 @@
 #include <memory>
 #include <unordered_map>
 #include "widget.h"
-// #include <spdlog/spdlog.h>
 
 namespace uuif
 {
@@ -25,6 +24,10 @@ namespace uuif
         void set_enabled(bool status) { m_enabled = status; }
 
         void add_widget(std::shared_ptr<c_widget> widget);
+
+        bool operator==(const c_window &window) const {
+            return this->type == window.type && this->label == window.label;
+        }
 
         //c_window() =;
         ~c_window();
