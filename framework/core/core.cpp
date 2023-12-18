@@ -1,6 +1,6 @@
 #include "core.h"
 
-#include "../utils/hashing.hpp"
+#include "../util/hashing.hpp"
 
 // NOTE: Do I rlly want to return the object at the end ??
 /* TODO: Replace this if with just .try_emplace() or add function overload

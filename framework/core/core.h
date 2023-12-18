@@ -4,7 +4,7 @@
 #include <memory>
 #include <string>
 
-#include "../utils/singleton.hpp"
+#include "../util/singleton.hpp"
 #include "../data_types.h"
 
 #include "../widgets/widget.h"

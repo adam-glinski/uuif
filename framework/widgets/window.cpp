@@ -1,6 +1,6 @@
 #include "window.h"
 #include "../core/core.h"
-#include "../utils/hashing.hpp"
+#include "../util/hashing.hpp"
 
 void uuif::c_window::add_widget(std::shared_ptr<c_widget> widget)
 {

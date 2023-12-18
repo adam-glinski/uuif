@@ -1,6 +1,6 @@
 # Build dir
-out/
-build/
+demo/out/
+demo/build/
 
 # Compiled Object files
 **/.DS_Store

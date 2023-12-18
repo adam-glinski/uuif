@@ -8,13 +8,13 @@ namespace uuif
 
     struct area_t
     {
-        float x{}, y{}, w{}, h{};
+        int x{}, y{}, w{}, h{};
     };
 
     struct vector_2d
     {
-        float x{}, y{};
-        vector_2d(float x, float y) : x(x), y(y) {}
+        int x{}, y{};
+        vector_2d(int x, int y) : x(x), y(y) {}
     };
 
     enum class widget_t
@@ -27,5 +27,10 @@ namespace uuif
         key_bind,
         tab,
         window
+    };
+
+    struct color_t
+    {
+        int r{}, g{}, b{}, a{};
     };
 }
