@@ -22,6 +22,8 @@ namespace uuif
         bool remove_window(id_t id);
         std::shared_ptr<c_window> get_window(id_t id);
         std::shared_ptr<c_window> get_window(const std::string& title);
+
+        void init();
     };
 
     inline const auto core = c_core::get();
