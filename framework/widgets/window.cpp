@@ -12,7 +12,7 @@ void uuif::c_window::add_widget(std::shared_ptr<c_widget> widget)
             magic_enum::enum_name(this->type), g_hash->compile_time(this->label.c_str()));
     else {
         if(insertion.first !=  m_children.end())
-            spdlog::warn("failed to add {} [0x{:0x}]: Widget already exists!", type_name, widget_id);
+            spdlog::warn("failed to add {} [0x{:0x}]: Widget already exists! (Operation ignored)", type_name, widget_id);
         else
             spdlog::critical("failed to add {} [0x{:0x}]", type_name, widget_id);
     }
