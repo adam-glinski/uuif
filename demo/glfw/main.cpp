@@ -2,8 +2,8 @@
 
 #include <spdlog/spdlog.h>
 #define GLFW_INCLUDE_NONE
-#include <glfw/glfw3.h>
-#include <gl/gl.h>
+#include <GLFW/glfw3.h>
+#include <glad/glad.h>
 
 void err_cllbck(int err, const char* desc) {
     spdlog::error("[{}]: {}", err, desc);
@@ -22,7 +22,8 @@ int main(int argc, char** argv) {
     assert(win != nullptr && "Failed to crate window");
 
     glfwMakeContextCurrent(win);
-    gladLoadGL(glfwGetProcAddress);
+    // gladLoadGL(glfwGetProcAddress);
+    gladLoadGLLoader((GLADloadproc)glfwGetProcAddress);
 
 
     glfwDestroyWindow(win);
