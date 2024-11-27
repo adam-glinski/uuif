@@ -18,9 +18,12 @@ namespace uuif{
 
     class i_renderer {
     public:
-        virtual void draw_line(int, int, int, int, color_t) = 0;
-        virtual void draw_rect(int, int, int, int, color_t) = 0;
-        virtual void draw_rect_filled(int, int, int, int, color_t) = 0;
+        virtual void draw_line(int x, int y, int w, int h, color_t color) = 0;
+        virtual void draw_rect_ex(int x, int y, int w, int h, color_t color, float thickness) = 0;
+        void draw_rect(int x, int y, int w, int h, color_t color) {
+            draw_rect_ex(x, y, w, h, color, 1);
+        }
+        virtual void draw_rect_filled(int x, int y, int w, int h, color_t color) = 0;
 
         //virtual ~i_renderer() = 0;
     };

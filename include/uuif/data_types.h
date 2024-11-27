@@ -31,7 +31,7 @@ namespace uuif
 
     struct color_t
     {
-        int r{}, g{}, b{}, a{};
+        unsigned char r{}, g{}, b{}, a{};
     };
 
 }

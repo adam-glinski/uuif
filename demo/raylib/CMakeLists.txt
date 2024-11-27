@@ -1,7 +1,7 @@
 set(BINARY_NAME uuif-demo-raylib)
 
 
-add_executable(${BINARY_NAME} main.cpp)
+add_executable(${BINARY_NAME} main.cpp raylib_renderer.hpp)
 #
 # set(BUILD_EXAMPLES OFF CACHE BOOL "" FORCE) # don't build the supplied examples
 # set(BUILD_GAMES    OFF CACHE BOOL "" FORCE) # don't build the supplied example games
