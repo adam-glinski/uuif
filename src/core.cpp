@@ -25,12 +25,14 @@ std::shared_ptr<uuif::c_window> uuif::c_core::add_window(const std::string& titl
     return created_window;
 }
 
+// Should prob just return void honestly ~Me
 bool uuif::c_core::remove_window(id_t id) {
     if (auto it_window = m_windows.find(id); it_window != m_windows.end()) {
         m_windows.erase(id);
     }
 
-    return !m_windows.contains(id);
+    // return !m_windows.contains(id);
+    return m_windows.find(id) == m_windows.end();
 }
 
 std::shared_ptr<uuif::c_window> uuif::c_core::get_window(id_t id) {

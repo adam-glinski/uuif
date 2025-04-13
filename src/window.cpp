@@ -29,7 +29,8 @@ uuif::c_window::~c_window()
 // TODO: Invert render order? Or implement focus system
 void uuif::c_window::draw()
 {
-    core->get_renderer()->draw_rect_filled(area.x, area.y, area.w, area.h, {30, 30, 30, 255});
+    core->get_renderer()->draw_rect_filled(area.x, area.y, area.w, area.h, {30, 30, 30, 255}); // background
+    core->get_renderer()->draw_rect(area.x, area.y, area.w, area.h, {0, 0, 0, 255});
     for(auto w : m_children)
         w.second->draw();
 }

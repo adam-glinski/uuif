@@ -1,4 +1,4 @@
 add_subdirectory(backend)
-add_subdirectory(glfw)
+add_subdirectory(sdl2)
 
 
